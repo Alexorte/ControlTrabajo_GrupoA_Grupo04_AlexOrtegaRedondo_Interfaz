@@ -70,6 +70,7 @@ public class Contenedores extends JFrame{
                 }else if(prioridad2.isSelected()){
                     prioridad=2;
                 }
+
                 String descripcionCampo=Tdescripcion.getText();
                 String empresaEnviaCampo=Tempresaenvia.getText();
                 String empresaRecibeCampo=Tempresarecibe.getText();
