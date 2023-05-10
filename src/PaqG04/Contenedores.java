@@ -42,7 +42,8 @@ public class Contenedores extends JFrame{
         setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setContentPane(Contenedores);
-        //Creamos el hub con el que vamos a trabajar
+
+        //Creamos el puerto con el que vamos a trabajar
         try{
             FileInputStream fis=new FileInputStream("puerto.dat");
             ObjectInputStream entrada=new ObjectInputStream(fis);
@@ -50,7 +51,7 @@ public class Contenedores extends JFrame{
             fis.close(); // no es obligatorio pero es recomendable
             entrada.close(); // no es obligatorio pero es recomendable
         }catch (Exception e){
-//Si el fichero no existe y aparece un error se crea el Puerto con el constructor por defecto
+        //Si el fichero no existe y aparece un error se crea el Puerto con el constructor por defecto
             Valencia = new Puerto();
         }
 
@@ -86,6 +87,7 @@ public class Contenedores extends JFrame{
                 Tdescripcion.setText("");
                 Tempresaenvia.setText("");
                 Tempresarecibe.setText("");
+
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
                 try {
@@ -159,6 +161,7 @@ public class Contenedores extends JFrame{
                 nHub0.setSelected(false);
                 nHub1.setSelected(false);
                 nHub2.setSelected(false);
+
                 FileOutputStream fos = null;
                 ObjectOutputStream salida = null;
                 try {
@@ -171,6 +174,7 @@ public class Contenedores extends JFrame{
                     // si aparece un error se muestra en pantalla el tipo de error
                     ex.printStackTrace();
                 }
+
             }
         });
         //Hacemos los listener de los botones de la prioridad para que no se pueda seleccionar más de uno a la vez
